@@ -8,8 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--color-primary)",
+        dark: "var(--color-dark)",
+        bright: "var(--color-bright)",
+        background: "var(--color-background)",
+        text: "var(--color-text)",
+        "text-light": "var(--color-text-light)",
+        border: "var(--color-border)",
+      },
+      maxWidth: {
+        container: "var(--max-width)",
+      },
+      fontFamily: {
+        spg: ["var(--font-spg)"],
       },
     },
   },
