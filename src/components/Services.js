@@ -5,21 +5,24 @@ import Image from "next/image";
 const Services = () => {
   return (
     <div className="mt-36">
-      <div className="flex items-center gap-10 mb-20">
-        <h2 className="bg-primary px-[7px] rounded-md">Services</h2>
-        <p className="w-[580px] text-lg">
+      <div className="flex  flex-col gap-7 lg:flex-row items-center  lg:gap-10 mb-10 lg:mb-20">
+        <h2 className="bg-primary px-[7px] lg:text-h2 font-semibold rounded-md mx-auto lg:mx-0 ">
+          Services
+        </h2>
+        <p className=" w-full text-center sm:text-left   lg:w-[580px] lg:text-p">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-10 gap-y-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10">
         <ServiceCard
           background="bright"
           titleBG="primary"
           imageSrc="/engine.svg"
           title="Search engine"
           subtitle="optimization"
+          arrow="/greenarrow.svg"
         />
         <ServiceCard
           background="primary"
@@ -27,6 +30,7 @@ const Services = () => {
           imageSrc="/payperclick.svg"
           title="Pay-per-click"
           subtitle="advertising"
+          arrow="/greenarrow.svg"
         />
         <ServiceCard
           background="dark"
@@ -35,6 +39,7 @@ const Services = () => {
           title="Social Media "
           subtitle="Marketing"
           text="white"
+          arrow="/whitearrow.svg"
         />
         <ServiceCard
           background="bright"
@@ -42,6 +47,7 @@ const Services = () => {
           imageSrc="/em.svg"
           title="Email"
           subtitle="Marketing"
+          arrow="/greenarrow.svg"
         />
         <ServiceCard
           background="primary"
@@ -49,6 +55,7 @@ const Services = () => {
           imageSrc="/copy.svg"
           title="Content"
           subtitle="Creation"
+          arrow="/greenarrow.svg"
         />
         <ServiceCard
           background="dark"
@@ -57,21 +64,22 @@ const Services = () => {
           title="Analytics and"
           subtitle="Tracking"
           text="white"
+          arrow="/whitearrow.svg"
         />
       </div>
 
-      <div className="bg-bright rounded-[45px] flex justify-evenly items-center w-full mt-24 h-[347px]">
-        <div className=" flex  w-[500px] flex-col gap-8">
-          <h3>Let's make things happen</h3>
-          <p>
+      <div className="bg-bright p-11 h-fit lg:p-0 rounded-[45px] flex justify-evenly items-center w-full mt-24 lg:h-[347px]">
+        <div className=" flex w-full  lg:w-[500px] flex-col gap-8">
+          <h3 className="font-semibold">Let's make things happen</h3>
+          <p className="lg:text-p">
             Contact us today to learn more about how our digital marketing
             services can help your business grow and succeed online.
           </p>
-          <button className="button bg-black text-white">
+          <button className="button mx-auto lg:mx-0 bg-black w-[264px] text-white">
             Get your free proposal
           </button>
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image
             src="/proposal.svg"
             width={359}

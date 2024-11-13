@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,7 +23,16 @@ module.exports = {
       fontFamily: {
         spg: ["var(--font-spg)"],
       },
+      width: {
+        mobile: "375px",
+      },
+      fontSize: {
+        h2: "40px",
+        h3: "30px",
+        h4: "20px",
+        p: "18px",
+      },
     },
   },
   plugins: [],
-};
+});

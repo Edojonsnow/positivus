@@ -8,6 +8,7 @@ const ServiceCard = ({
   title,
   subtitle,
   imageSrc,
+  arrow,
 }) => {
   const backgrounds = {
     primary: "bg-primary",
@@ -26,28 +27,28 @@ const ServiceCard = ({
 
   return (
     <div
-      className={` ${backgrounds[background]} shadow-[0px_5px_1px_rgba(0,_0,_0,_1)]  w-[600px] flex items-center justify-between p-12 border border-black rounded-[45px] h-[310px]`}
+      className={` ${backgrounds[background]} relative shadow-[0px_5px_1px_rgba(0,_0,_0,_1)]  w-full h-fit lg:w-[600px] flex items-center justify-between p-12 border border-black rounded-[45px] lg:h-[310px]`}
     >
       <div className="flex flex-col w-[221px] h-[210px] gap-24">
         <div>
           <h3
-            className={` ${titleBackgrounds[titleBG]} w-fit  px-[6px] rounded-md`}
+            className={` ${titleBackgrounds[titleBG]} lg:text-h3 w-fit  px-[6px] rounded-md`}
           >
             {title}
           </h3>
           <h3
-            className={` ${titleBackgrounds[titleBG]} w-fit  px-[6px] rounded-md`}
+            className={` ${titleBackgrounds[titleBG]} lg:text-h3 w-fit  px-[6px] rounded-md`}
           >
             {subtitle}
           </h3>
         </div>
         <div className="flex items-center gap-4">
-          <Image src="/greenarrow.svg" alt="arrow" width={41} height={41} />
-          <p className={` ${textColor[text]} `}>Learn more</p>
+          <Image src={arrow} alt="arrow" width={41} height={41} />
+          <p className={` ${textColor[text]} hidden lg:block `}>Learn more</p>
         </div>
       </div>
-      <div>
-        <Image src={imageSrc} alt="arrow" width={210} height={170} />
+      <div className="absolute bottom-11 right-11 w-[165px] h-[129px] lg:w-[210px] lg:h-[170px] ">
+        <Image src={imageSrc} alt="image" fill />
       </div>
     </div>
   );
