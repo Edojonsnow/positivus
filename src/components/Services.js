@@ -5,7 +5,11 @@ import Image from "next/image";
 const Services = () => {
   return (
     <div className="mt-36">
-      <div className="flex  flex-col gap-7 lg:flex-row items-center  lg:gap-10 mb-10 lg:mb-20">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="flex  flex-col gap-7 lg:flex-row items-center  lg:gap-10 mb-10 lg:mb-20"
+      >
         <h2 className="bg-primary px-[7px] lg:text-h2 font-semibold rounded-md mx-auto lg:mx-0 ">
           Services
         </h2>
@@ -23,6 +27,7 @@ const Services = () => {
           title="Search engine"
           subtitle="optimization"
           arrow="/greenarrow.svg"
+          delay=""
         />
         <ServiceCard
           background="primary"
@@ -68,18 +73,40 @@ const Services = () => {
         />
       </div>
 
-      <div className="bg-bright p-11 h-fit lg:p-0 rounded-[45px] flex justify-evenly items-center w-full mt-24 lg:h-[347px]">
-        <div className=" flex w-full  lg:w-[500px] flex-col gap-8">
-          <h3 className="font-semibold">Let's make things happen</h3>
-          <p className="lg:text-p">
+      <div
+        data-aos="fade-right"
+        data-aos-delay="300"
+        className="bg-bright p-11 h-fit lg:p-0 rounded-[45px] flex justify-evenly items-center w-full mt-24 lg:h-[347px]"
+      >
+        <div
+          data-aos="fade-in"
+          data-aos-delay="300"
+          className=" flex w-full  lg:w-[500px] flex-col gap-8"
+        >
+          <h3
+            data-aos="fade-right"
+            data-aos-delay="400"
+            className="font-semibold"
+          >
+            Let's make things happen
+          </h3>
+          <p data-aos="fade-right" data-aos-delay="500" className="lg:text-p">
             Contact us today to learn more about how our digital marketing
             services can help your business grow and succeed online.
           </p>
-          <button className="button mx-auto lg:mx-0 bg-black w-[264px] text-white">
+          <button
+            data-aos="fade-right"
+            data-aos-delay="600"
+            className="button mx-auto lg:mx-0 bg-black w-[264px] text-white"
+          >
             Get your free proposal
           </button>
         </div>
-        <div className="hidden lg:block">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="400"
+          className="hidden lg:block"
+        >
           <Image
             src="/proposal.svg"
             width={359}

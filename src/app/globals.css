@@ -49,6 +49,7 @@ p {
   border: solid 1px black;
   border-radius: 14px;
   max-width: 556px;
+  cursor: pointer;
 }
 
 .speech-bubble {
@@ -161,4 +162,28 @@ p {
 }
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--color-primary);
+}
+
+[data-aos="example-anim3"] {
+  transform: rotate(360deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+/* [data-aos-card="cardOpen"] {
+  height: 279px;
+
+  transition: all 1s ease;
+  &.aos-animate {
+    transition: all;
+    opacity: 1;
+  }
+} */
+
+.aos-init {
+  transform: height;
+  transition: 100;
 }

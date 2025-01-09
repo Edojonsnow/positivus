@@ -4,7 +4,11 @@ const Form = () => {
   return (
     <div className="relative">
       <form className="flex flex-col gap-8 ">
-        <label className="flex flex-col mb-1 ">
+        <label
+          data-aos="fade-right"
+          data-aos-delay="110"
+          className="flex flex-col mb-1 "
+        >
           Name*
           <input
             type="text"
@@ -13,7 +17,11 @@ const Form = () => {
             className=" w-full h-14 lg:w-[556px] lg:h-[59px] mt-1 outline-none pl-5 px-1.5 border border-black rounded-[14px]"
           />
         </label>
-        <label className="flex flex-col">
+        <label
+          data-aos="fade-right"
+          data-aos-delay="120"
+          className="flex flex-col"
+        >
           Email*
           <input
             type="email"
@@ -22,7 +30,11 @@ const Form = () => {
             className="w-full h-14 lg:w-[556px] lg:h-[59px] mt-1 outline-none pl-5 py-1.5 border border-black rounded-[14px]"
           />
         </label>
-        <label className="flex flex-col">
+        <label
+          data-aos="fade-right"
+          data-aos-delay="130"
+          className="flex flex-col"
+        >
           Message*
           <textarea
             type="tel"
@@ -32,6 +44,8 @@ const Form = () => {
           />
         </label>
         <input
+          data-aos="fade-right"
+          data-aos-delay="140"
           className=" hidden lg:block  button lg:w-[556px] bg-black text-white"
           type="submit"
           value="Send Message"

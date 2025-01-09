@@ -1,14 +1,24 @@
 "use client";
+import AOS from "aos";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const ProcessCard = ({ title, index }) => {
+const ProcessCard = ({ title, index, delay }) => {
   const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ once: true });
+  });
 
   return (
     <div
+      data-aos-offset="200"
+      data-aos-easing="linear"
+      data-aos-duration="300"
+      data-aos-mirror="false"
+      data-aos-card="cardOpen"
       onClick={() => setIsOpen(!isOpen)}
-      className={`overflow-hidden cursor-pointer  shadow-[0px_5px_1px_rgba(0,_0,_0,_1)]  transition-all duration-500 ${
+      className={` overflow-hidden cursor-pointer  shadow-[0px_5px_1px_rgba(0,_0,_0,_1)]  transition-all duration-500 ${
         isOpen ? "bg-bright" : "bg-primary"
       } flex flex-col rounded-[45px] p-7  lg:px-14 lg:py-10 border border-black" ${
         isOpen ? " h-[98px] lg:h-[159px]" : "h-[279px]"

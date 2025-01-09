@@ -20,7 +20,7 @@ const Carousel = (props) => {
   } = usePrevNextButtons(emblaApi);
   return (
     <div className=" h-[625px]">
-      <div className="    px-5 flex flex-col    gap-14 lg:gap-32  pt-20 overflow-hidden h-full  bg-dark rounded-[45px]">
+      <div className="     px-5 flex flex-col    gap-14 lg:gap-32  pt-20 overflow-hidden h-full  bg-dark rounded-[45px]">
         <div className="embla__viewport   " ref={emblaRef}>
           <div className="embla__container flex  ">
             {slides.map((index) => (
