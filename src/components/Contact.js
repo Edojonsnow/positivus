@@ -26,7 +26,7 @@ const Contact = () => {
             data-aos-delay="250"
             className="w-full text-center sm:text-left   lg:w-[580px] lg:text-p"
           >
-            Connect with Us: Let's Discuss Your Digital Marketing Needs
+            Connect with Us: Let&apos;s Discuss Your Digital Marketing Needs
           </p>
         </div>
 
